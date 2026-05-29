@@ -17,21 +17,11 @@ def load_data():
 
 df = load_data()
 
-st.sidebar.header("Filters")
-
-species = st.sidebar.multiselect(
-    "Select Species",
-    options=df['species'].dropna().unique(),
-    default=df['species'].dropna().unique()
-)
-
-filtered_df = df[df['species'].isin(species)]
-
 st.subheader("Penguin Species Count")
 
 fig1, ax1 = plt.subplots()
 
-filtered_df['species'].value_counts().plot(
+df['species'].value_counts().plot(
     kind='bar',
     ax=ax1
 )
