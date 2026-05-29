@@ -39,6 +39,11 @@ df['species'].value_counts().plot(
     ax=ax1
 )
 
+ax1.set_xlabel("Species")
+ax1.set_ylabel("Count")
+
+st.pyplot(fig1)
+
 st.subheader("Bill Length vs Flipper Length")
 
 fig3, ax3 = plt.subplots()
@@ -52,9 +57,3 @@ ax3.set_xlabel("Bill Length (mm)")
 ax3.set_ylabel("Flipper Length (mm)")
 
 st.pyplot(fig3)
-
-
-ax1.set_xlabel("Species")
-ax1.set_ylabel("Count")
-
-st.pyplot(fig1)
