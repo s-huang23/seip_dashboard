@@ -17,6 +17,9 @@ def load_data():
 
 df = load_data()
 
+st.subheader("Dataset Preview")
+st.dataframe(df.head())
+
 st.subheader("Penguin Species Count")
 
 fig1, ax1 = plt.subplots()
