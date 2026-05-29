@@ -1,6 +1,5 @@
+streamlit
 pandas
 matplotlib
-gzip
-simplejson
-collections
 seaborn
+numpy
